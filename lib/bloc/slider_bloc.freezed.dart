@@ -16,20 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SliderEvent {
-  double get currentPage => throw _privateConstructorUsedError;
+  int get currentPage => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(double currentPage) setCurrentPage,
+    required TResult Function(int currentPage) setCurrentPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double currentPage)? setCurrentPage,
+    TResult? Function(int currentPage)? setCurrentPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double currentPage)? setCurrentPage,
+    TResult Function(int currentPage)? setCurrentPage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,7 +61,7 @@ abstract class $SliderEventCopyWith<$Res> {
           SliderEvent value, $Res Function(SliderEvent) then) =
       _$SliderEventCopyWithImpl<$Res, SliderEvent>;
   @useResult
-  $Res call({double currentPage});
+  $Res call({int currentPage});
 }
 
 /// @nodoc
@@ -83,7 +83,7 @@ class _$SliderEventCopyWithImpl<$Res, $Val extends SliderEvent>
       currentPage: null == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
     ) as $Val);
   }
 }
@@ -96,7 +96,7 @@ abstract class _$$SetCurrentPageCopyWith<$Res>
       __$$SetCurrentPageCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double currentPage});
+  $Res call({int currentPage});
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class __$$SetCurrentPageCopyWithImpl<$Res>
       null == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
     ));
   }
 }
@@ -127,7 +127,7 @@ class _$SetCurrentPage implements SetCurrentPage {
   const _$SetCurrentPage(this.currentPage);
 
   @override
-  final double currentPage;
+  final int currentPage;
 
   @override
   String toString() {
@@ -155,7 +155,7 @@ class _$SetCurrentPage implements SetCurrentPage {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(double currentPage) setCurrentPage,
+    required TResult Function(int currentPage) setCurrentPage,
   }) {
     return setCurrentPage(currentPage);
   }
@@ -163,7 +163,7 @@ class _$SetCurrentPage implements SetCurrentPage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double currentPage)? setCurrentPage,
+    TResult? Function(int currentPage)? setCurrentPage,
   }) {
     return setCurrentPage?.call(currentPage);
   }
@@ -171,7 +171,7 @@ class _$SetCurrentPage implements SetCurrentPage {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double currentPage)? setCurrentPage,
+    TResult Function(int currentPage)? setCurrentPage,
     required TResult orElse(),
   }) {
     if (setCurrentPage != null) {
@@ -210,10 +210,10 @@ class _$SetCurrentPage implements SetCurrentPage {
 }
 
 abstract class SetCurrentPage implements SliderEvent {
-  const factory SetCurrentPage(final double currentPage) = _$SetCurrentPage;
+  const factory SetCurrentPage(final int currentPage) = _$SetCurrentPage;
 
   @override
-  double get currentPage;
+  int get currentPage;
   @override
   @JsonKey(ignore: true)
   _$$SetCurrentPageCopyWith<_$SetCurrentPage> get copyWith =>
@@ -222,7 +222,7 @@ abstract class SetCurrentPage implements SliderEvent {
 
 /// @nodoc
 mixin _$SliderState {
-  double? get currentPage => throw _privateConstructorUsedError;
+  int? get currentPage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SliderStateCopyWith<SliderState> get copyWith =>
@@ -235,7 +235,7 @@ abstract class $SliderStateCopyWith<$Res> {
           SliderState value, $Res Function(SliderState) then) =
       _$SliderStateCopyWithImpl<$Res, SliderState>;
   @useResult
-  $Res call({double? currentPage});
+  $Res call({int? currentPage});
 }
 
 /// @nodoc
@@ -257,7 +257,7 @@ class _$SliderStateCopyWithImpl<$Res, $Val extends SliderState>
       currentPage: freezed == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
     ) as $Val);
   }
 }
@@ -270,7 +270,7 @@ abstract class _$$_SliderStateCopyWith<$Res>
       __$$_SliderStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double? currentPage});
+  $Res call({int? currentPage});
 }
 
 /// @nodoc
@@ -290,7 +290,7 @@ class __$$_SliderStateCopyWithImpl<$Res>
       currentPage: freezed == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
     ));
   }
 }
@@ -301,7 +301,7 @@ class _$_SliderState extends _SliderState {
   const _$_SliderState({this.currentPage}) : super._();
 
   @override
-  final double? currentPage;
+  final int? currentPage;
 
   @override
   String toString() {
@@ -328,11 +328,11 @@ class _$_SliderState extends _SliderState {
 }
 
 abstract class _SliderState extends SliderState {
-  const factory _SliderState({final double? currentPage}) = _$_SliderState;
+  const factory _SliderState({final int? currentPage}) = _$_SliderState;
   const _SliderState._() : super._();
 
   @override
-  double? get currentPage;
+  int? get currentPage;
   @override
   @JsonKey(ignore: true)
   _$$_SliderStateCopyWith<_$_SliderState> get copyWith =>

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:slideshow/screens/home_screen.dart';
-import 'package:slideshow/screens/login_screen.dart';
-import 'package:slideshow/screens/silver_home_screen.dart';
+import 'package:slideshow/screens/boarding_screen.dart';
 import 'package:slideshow/screens/slideshow_screen.dart';
-// import 'package:slideshow/screens/slideshow_screen.dart';
+
 
 void main() => runApp(const MyApp());
 

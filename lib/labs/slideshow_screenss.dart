@@ -86,7 +86,7 @@ class _SlidesState extends State<_Slides> {
   void initState() {
     super.initState();
     pageViewController.addListener(() {
-      _sliderBloc.add(SetCurrentPage(pageViewController.page ?? 0));
+      // _sliderBloc.add(SetCurrentPage(pageViewController.page ?? 0));
     });
   }
 

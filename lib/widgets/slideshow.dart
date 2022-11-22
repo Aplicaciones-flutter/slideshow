@@ -52,32 +52,13 @@ class _Dots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          width: double.infinity,
-          height: 40,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(totalSlides, (index) => _Dot(index, primaryColor, secondaryColor, primaryBullet, secondaryBullet)),
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.fromLTRB(20, 0, 20, 30),
-          child: ElevatedButton(
-            onPressed: () {
-              print('Siguiente');
-            },
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(double.infinity, 50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0)
-              ),
-            ),
-            child: Text('SIGUIENTE')
-          ),
-        )
-      ],
+    return SizedBox(
+      width: double.infinity,
+      height: 70,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(totalSlides, (index) => _Dot(index, primaryColor, secondaryColor, primaryBullet, secondaryBullet)),
+      ),
     );
   }
 }
@@ -129,7 +110,7 @@ class _SlidesState extends State<_Slides> {
   void initState() {
     super.initState();
     pageViewController.addListener(() {
-      _sliderBloc.add(SetCurrentPage(pageViewController.page ?? 0));
+      // _sliderBloc.add(SetCurrentPage(pageViewController.page ?? 0));
     });
   }
 
@@ -144,6 +125,9 @@ class _SlidesState extends State<_Slides> {
     _sliderBloc = context.read<SliderBloc>();
     return PageView(
       controller: pageViewController,
+      onPageChanged: (int index) {
+        print('gaaaaaaaaaaaaaaaaaaaaa ${index}');
+      },
       children: widget.slides.map((slide) => _Slide(slide: slide)).toList(),
     );
   }

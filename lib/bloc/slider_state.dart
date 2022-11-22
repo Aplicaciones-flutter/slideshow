@@ -5,7 +5,7 @@ class SliderState with _$SliderState {
   const SliderState._();
 
   const factory SliderState({
-    double? currentPage
+    int? currentPage
   }) = _SliderState;
 
   factory SliderState.initial() {
