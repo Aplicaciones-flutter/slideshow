@@ -52,13 +52,32 @@ class _Dots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 70,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(totalSlides, (index) => _Dot(index, primaryColor, secondaryColor, primaryBullet, secondaryBullet)),
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          width: double.infinity,
+          height: 40,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(totalSlides, (index) => _Dot(index, primaryColor, secondaryColor, primaryBullet, secondaryBullet)),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.fromLTRB(20, 0, 20, 30),
+          child: ElevatedButton(
+            onPressed: () {
+              print('Siguiente');
+            },
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0)
+              ),
+            ),
+            child: Text('SIGUIENTE')
+          ),
+        )
+      ],
     );
   }
 }
